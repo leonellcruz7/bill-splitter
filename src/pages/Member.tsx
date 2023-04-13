@@ -32,8 +32,7 @@ export default function Member() {
               <td>Food</td>
               <td>$100.00</td>
               <td className="">
-                <i className="ri-edit-box-line bg-green p-2 text-[20px] rounded-[5px] mx-1 cursor-pointer text-darkBlue"></i>
-                <i className="ri-delete-bin-6-line bg-red text-darkBlue p-2 text-[20px] rounded-[5px] mx-1 cursor-pointer"></i>
+                <i className="ri-more-2-fill"></i>{" "}
               </td>
             </tr>
             <br />{" "}

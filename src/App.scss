@@ -44,7 +44,7 @@ table {
 }
 
 th {
-  @apply text-yellow text-lg text-start p-3;
+  @apply text-yellow text-lg text-start p-3 truncate;
 }
 
 td {
