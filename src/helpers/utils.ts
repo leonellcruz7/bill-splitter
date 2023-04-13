@@ -7,5 +7,7 @@ export const fetchGroups = () => {
   keys.map((i) => {
     groups.push(JSON.parse(data[i]));
   });
-  return groups;
+  return groups.sort(
+    (a, b) => new Date(b.date_created) - new Date(a.date_created)
+  );
 };

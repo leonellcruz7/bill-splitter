@@ -1,7 +1,7 @@
 import React, { FC, useState } from "react";
 import { Button, IconButton } from "./buttons";
 import { useNavigate } from "react-router-dom";
-import { CreateCardTypes, Members } from "../types/types";
+import { CreateCardTypes, CreateGroup, Members } from "../types/types";
 import { fetchGroups } from "../helpers/utils";
 
 const CreateCard: FC<CreateCardTypes> = (props) => {
@@ -26,14 +26,14 @@ const CreateCard: FC<CreateCardTypes> = (props) => {
     }
     const total = members.reduce((a, b) => a + b.total, 0);
 
-    const test = {
-      id: groups.length + 1,
+    const group: CreateGroup = {
+      id: (groups.length + 1).toString(),
       name: name,
       members: members,
       total: total,
-      date_created: new Date().toDateString(),
+      date_created: new Date(),
     };
-    localStorage.setItem(name, JSON.stringify(test));
+    localStorage.setItem(name, JSON.stringify(group));
     navigate("/bill-calculator");
   };
   return (

@@ -19,11 +19,23 @@ export interface IconButtonTypes {
 export interface CreateCardTypes {
   name: string;
 }
-
-export interface Details {
-  date_created: string;
+interface Member {
   name: string;
   total: number;
+}
+export interface CreateGroup {
+  id: string;
+  name: string;
+  members: Member[];
+  total: number;
+  date_created: Date;
+}
+
+export interface Details {
+  date_created: Date;
+  name: string;
+  total: number;
+  id: string;
 }
 export interface GroupCardTypes {
   details: Details;
