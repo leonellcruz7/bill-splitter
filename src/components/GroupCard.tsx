@@ -11,7 +11,7 @@ const GroupCard: FC<GroupCardTypes> = (props) => {
   };
   return (
     <div
-      className="min-w-[130px] h-[120px] bg-darkBlue rounded-[40px] text-center flex flex-col items-center justify-center cursor-pointer hover:scale-[1.08] transition-all p-4"
+      className="min-w-[220px] w-full max-w-[250px] h-[120px] bg-darkBlue rounded-[40px] text-center flex flex-col items-center justify-center cursor-pointer hover:scale-[1.08] transition-all p-4"
       onClick={handleClick.bind(null, id)}
     >
       <p className="text-xs text-lightYellow">

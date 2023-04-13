@@ -19,8 +19,8 @@ export default function Home() {
           <i className="ri-add-line"></i>
         </IconButton>
       </div>
-      <div className="mt-10">
-        <div className="flex flex-wrap gap-3 justify-start md:justify-center">
+      <div className="mt-10 flex justify-center">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 md:grid-cols-3 lg:grid-cols-5">
           {groups.length !== 0 ? (
             groups.map((item, index) => {
               return <GroupCard key={index} details={item} />;
