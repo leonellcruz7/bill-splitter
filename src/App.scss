@@ -1,0 +1,64 @@
+.button-icon {
+  @apply bg-darkBlue w-[60px] h-[60px] rounded-[20px];
+  > i {
+    @apply text-blue text-[40px];
+  }
+  &.no-bg {
+    @apply bg-[transparent];
+    > i {
+      @apply text-darkBlue text-[40px];
+    }
+  }
+}
+
+.button {
+  @apply w-fit h-fit px-10 py-2 text-blue rounded-[30px] font-semibold;
+  &.red {
+    @apply bg-red;
+  }
+  &.green {
+    @apply bg-green;
+  }
+  &.darkBlue {
+    @apply bg-darkBlue text-yellow;
+  }
+}
+button {
+  transition: 0.1s ease;
+}
+button:hover {
+  transform: scale(1.03);
+  filter: brightness(0.7);
+}
+
+.input {
+  @apply w-full bg-darkBlue px-5 py-3 rounded-[30px] border-none outline-none text-yellow font-semibold tracking-wide text-center text-lg md:text-headline3;
+}
+
+.label {
+  @apply text-lg md:text-headline6 text-darkBlue font-medium;
+}
+
+table {
+  @apply w-full;
+}
+
+th {
+  @apply text-yellow text-lg text-start p-3;
+}
+
+td {
+  @apply p-4;
+  &:first-child {
+    @apply rounded-l-[20px];
+  }
+  &:last-child {
+    @apply rounded-r-[20px] text-end;
+  }
+}
+
+tbody {
+  tr {
+    @apply bg-blue;
+  }
+}
