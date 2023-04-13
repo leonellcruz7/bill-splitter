@@ -2,9 +2,11 @@ import React, { FC, useState } from "react";
 import { Button, IconButton } from "./buttons";
 import { useNavigate } from "react-router-dom";
 import { CreateCardTypes, Members } from "../types/types";
+import { fetchGroups } from "../helpers/utils";
 
 const CreateCard: FC<CreateCardTypes> = (props) => {
   const { name } = props;
+  const groups = fetchGroups();
   const navigate = useNavigate();
   const [value, setValue] = useState(2);
   const handleSubtract = () => {
@@ -25,6 +27,7 @@ const CreateCard: FC<CreateCardTypes> = (props) => {
     const total = members.reduce((a, b) => a + b.total, 0);
 
     const test = {
+      id: groups.length + 1,
       name: name,
       members: members,
       total: total,

@@ -4,16 +4,12 @@ import Empty from "../components/empty";
 import GroupCard from "../components/GroupCard";
 import { useNavigate } from "react-router-dom";
 import { Details } from "../types/types";
+import { fetchGroups } from "../helpers/utils";
 
 export default function Home() {
   const navigate = useNavigate();
-  const data = localStorage;
-  const keys = Object.keys(data);
-  const members: Details[] = [];
-  keys.map((i) => {
-    members.push(JSON.parse(data[i]));
-  });
-  console.log(members);
+  const groups = fetchGroups();
+  console.log(groups);
 
   return (
     <div>
@@ -24,9 +20,9 @@ export default function Home() {
         </IconButton>
       </div>
       <div className="mt-10">
-        <div className="flex flex-wrap gap-3 justify-center md:justify-start">
-          {members.length !== 0 ? (
-            members.map((item, index) => {
+        <div className="flex flex-wrap gap-3 justify-start md:justify-center">
+          {groups.length !== 0 ? (
+            groups.map((item, index) => {
               return <GroupCard key={index} details={item} />;
             })
           ) : (

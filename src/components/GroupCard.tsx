@@ -1,7 +1,6 @@
 import React, { FC } from "react";
 import { useNavigate } from "react-router-dom";
 import { GroupCardTypes } from "../types/types";
-import { formatDate } from "../helpers/utils";
 
 const GroupCard: FC<GroupCardTypes> = (props) => {
   const { details } = props;
@@ -12,7 +11,7 @@ const GroupCard: FC<GroupCardTypes> = (props) => {
   };
   return (
     <div
-      className="w-[130px] h-[120px] bg-darkBlue rounded-[40px] text-center flex flex-col items-center justify-center cursor-pointer hover:scale-[1.08] transition-all"
+      className="min-w-[130px] h-[120px] bg-darkBlue rounded-[40px] text-center flex flex-col items-center justify-center cursor-pointer hover:scale-[1.08] transition-all p-4"
       onClick={handleClick}
     >
       <p className="text-xs text-lightYellow">{date_created}</p>
