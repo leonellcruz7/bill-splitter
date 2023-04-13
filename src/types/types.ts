@@ -34,6 +34,7 @@ export interface CreateGroup {
 export interface Details {
   date_created: Date;
   name: string;
+  members: Members[];
   total: number;
   id: string;
 }
@@ -44,4 +45,8 @@ export interface GroupCardTypes {
 export interface Members {
   name: string;
   total: number;
+}
+
+export interface MemberDetails {
+  details: Members;
 }

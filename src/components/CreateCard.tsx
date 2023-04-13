@@ -34,7 +34,7 @@ const CreateCard: FC<CreateCardTypes> = (props) => {
       date_created: new Date(),
     };
     localStorage.setItem(name, JSON.stringify(group));
-    navigate("/bill-calculator");
+    navigate(`/${group.id}`);
   };
   return (
     <div className="bg-yellow h-[220px] rounded-[40px] p-4 flex flex-col items-center justify-center">
